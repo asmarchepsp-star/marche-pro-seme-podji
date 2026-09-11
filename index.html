@@ -77,7 +77,9 @@
 
         .cover-image {
             width: 100%;
-            height: 380px;
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.12);
@@ -109,11 +111,6 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .flyer-image:hover {
-            transform: scale(1.02);
         }
 
         .download-btn {
@@ -130,12 +127,6 @@
             border-radius: 30px;
             margin-top: 1.5rem;
             box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-            transition: background-color 0.2s, transform 0.2s;
-        }
-
-        .download-btn:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
         }
 
         .authority-container {
@@ -152,6 +143,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             flex-shrink: 0;
+            background-color: #ddd;
         }
 
         .authority-details {
@@ -267,11 +259,6 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: transform 0.2s;
-        }
-
-        .photo-card:hover {
-            transform: translateY(-5px);
         }
 
         .photo-card img {
@@ -279,6 +266,7 @@
             height: 200px;
             object-fit: cover;
             display: block;
+            background-color: #ddd;
         }
 
         .photo-caption {
@@ -323,10 +311,6 @@
             cursor: pointer;
         }
 
-        .radio-option:last-child {
-            margin-bottom: 0;
-        }
-
         .radio-option input {
             margin-right: 10px;
             transform: scale(1.2);
@@ -343,20 +327,10 @@
             border-radius: 6px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
-            transition: background 0.2s, transform 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #1ebd56;
-            transform: translateY(-2px);
-        }
-
-        button[type="submit"]:active {
-            transform: translateY(0);
         }
 
         @media (max-width: 650px) {
@@ -364,7 +338,6 @@
             .logo-event { max-width: 100px; }
             .logo-mairie { max-width: 75px; }
             .logo-sport-tous { max-width: 95px; }
-            .cover-image { height: 220px; }
             .program-container { flex-direction: column-reverse; align-items: center; }
             .tshirt-box { width: 100%; max-width: 280px; }
             .authority-container { flex-direction: column; text-align: center; }
@@ -384,3 +357,20 @@
     </header>
 
     <div class="cover-container">
+        <img src="rencontre2.png" alt="Photo de couverture" class="cover-image">
+    </div>
+
+    <main>
+        <section class="flyer-container">
+            <h2>Affiche Officielle de l'Édition 2026</h2>
+            <img src="flyer.png" alt="Affiche Officielle" class="flyer-image">
+            <br>
+            <a href="flyer.png" download="Flyer_Marche_Internationale_Seme_Podji_2026.png" class="download-btn">
+                📥 Télécharger le Flyer Officiel (PNG)
+            </a>
+        </section>
+
+        <section>
+            <h2>Soutien Institutionnel</h2>
+            <div class="authority-container">
+                <img src="maire-seme.png" alt="Photo de M. Thomas SINGBO" class="authority-photo">
