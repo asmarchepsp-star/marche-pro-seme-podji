@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marche Internationale Sèmè-Podji - 31 Octobre 2026</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --accent-color: #e67e22;
+            --success-color: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 2rem 1rem 1.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .header-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-event {
+            max-width: 130px;
+            height: auto;
+        }
+
+        .logo-sport-tous {
+            max-width: 125px;
+            height: auto;
+        }
+
+        .logo-mairie {
+            max-width: 100px;
+            height: auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .slogan {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .cover-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 1.5rem auto 0 auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            display: block;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .flyer-container {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .flyer-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .flyer-image:hover {
+            transform: scale(1.02);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--success-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .authority-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #fff;
+        }
+
+        .authority-photo {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .authority-details {
+            flex: 1;
+        }
+
+        .authority-title {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        .authority-role {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .authority-text {
+            font-style: italic;
+            color: #555;
+        }
+
+        .countdown {
+            background: linear-gradient(135deg, var(--primary-color), #003366);
+            color: white;
+            text-align: center;
+        }
+
+        .countdown h3 {
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .timer-item {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            min-width: 80px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* --- Style de la section Programme Révisée (Infos + T-shirt) --- */
+        .program-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .program-details {
+            flex: 1;
+        }
+
+        .tshirt-box {
+            width: 240px;
+            flex-shrink: 0;
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tshirt-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .tshirt-legend {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+        .info-line {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .itinerary {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        /* --------------------------------------------------------------- */
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .photo-card {
+            background: var(--secondary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-caption {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            color: #555;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        input[type="text"], input[type="tel"] {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+        }
+
+        .radio-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .radio-option input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        button[type="submit"] {
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #004085;
+        }
+
+        @media (max-width: 650px) {
+            .header-logos { gap: 1rem; }
+            .logo-event { max-width: 100px; }
+            .logo-mairie { max-width: 75px; }
+            .logo-sport-tous { max-width: 95px; }
+            .cover-image { height: 220px; }
+            .program-container { flex-direction: column-reverse; align-items: center; }
+            .tshirt-box { width: 100%; max-width: 280px; }
+            .authority-container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logos">
+            <img src="logo.png" alt="Logo Officiel Marche Pro Sèmè-Podji" class="logo-event">
+            <img src="logo_sport_pour_tous.png" alt="Logo Bureau Communal du Sport pour Tous - Sèmè-Podji" class="logo-sport-tous">
+            <img src="logo_mairie.png" alt="Logo Officiel Ville de Sèmè-Podji" class="logo-mairie">
+        </div>
+        <h1># Marche Internationale</h1>
+        <p class="slogan">« Ensemble pour une santé meilleure ! »</p>
+    </header>
+
+    <div class="cover-container">
+        <img src="photo-couverture.jpg" alt="Participants en action - Marche Pro Sèmè-Podji" class="cover-image">
+    </div>
+
+    <main>
+        <section class="flyer-container">
