@@ -38,19 +38,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .logo-event {
-            max-width: 130px;
+        .logo-event, .logo-sport-tous, .logo-mairie {
             height: auto;
-        }
-
-        .logo-sport-tous {
-            max-width: 125px;
-            height: auto;
-        }
-
-        .logo-mairie {
-            max-width: 100px;
-            height: auto;
+            max-height: 90px;
         }
 
         h1 {
@@ -143,7 +133,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             flex-shrink: 0;
-            background-color: #ddd;
+            background-color: #e9ecef;
         }
 
         .authority-details {
@@ -185,13 +175,14 @@
             gap: 1.5rem;
             font-size: 1.5rem;
             font-weight: bold;
+            flex-wrap: wrap;
         }
 
         .timer-item {
             background: rgba(255,255,255,0.15);
             padding: 0.5rem 1rem;
             border-radius: 6px;
-            min-width: 80px;
+            min-width: 90px;
         }
 
         h2 {
@@ -266,7 +257,7 @@
             height: 200px;
             object-fit: cover;
             display: block;
-            background-color: #ddd;
+            background-color: #e9ecef;
         }
 
         .photo-caption {
@@ -335,9 +326,6 @@
 
         @media (max-width: 650px) {
             .header-logos { gap: 1rem; }
-            .logo-event { max-width: 100px; }
-            .logo-mairie { max-width: 75px; }
-            .logo-sport-tous { max-width: 95px; }
             .program-container { flex-direction: column-reverse; align-items: center; }
             .tshirt-box { width: 100%; max-width: 280px; }
             .authority-container { flex-direction: column; text-align: center; }
@@ -348,22 +336,22 @@
 
     <header>
         <div class="header-logos">
-            <img src="LOGO.png" alt="Logo Officiel Marche Pro Sèmè-Podji" class="logo-event">
-            <img src="logo_sport_pour_tous.png" alt="Logo Bureau Communal du Sport pour Tous - Sèmè-Podji" class="logo-sport-tous">
-            <img src="logo_mairie.png" alt="Logo Officiel Ville de Sèmè-Podji" class="logo-mairie">
+            <img src="LOGO.png" alt="Logo Officiel Marche Pro Sèmè-Podji" class="logo-event" onerror="this.style.display='none'">
+            <img src="logo_sport_pour_tous.png" alt="Logo Bureau Communal du Sport pour Tous" class="logo-sport-tous" onerror="this.style.display='none'">
+            <img src="logo_mairie.png" alt="Logo Officiel Ville de Sèmè-Podji" class="logo-mairie" onerror="this.style.display='none'">
         </div>
         <h1># Marche Internationale</h1>
         <p class="slogan">« Ensemble pour une santé meilleure ! »</p>
     </header>
 
     <div class="cover-container">
-        <img src="rencontre2.png" alt="Photo de couverture" class="cover-image">
+        <img src="rencontre2.png" alt="Photo de couverture" class="cover-image" onerror="this.style.opacity='0.5'">
     </div>
 
     <main>
         <section class="flyer-container">
             <h2>Affiche Officielle de l'Édition 2026</h2>
-            <img src="flyer.png" alt="Affiche Officielle" class="flyer-image">
+            <img src="flyer.png" alt="Affiche de l'événement" class="flyer-image" onerror="this.style.backgroundColor='#ccc'">
             <br>
             <a href="flyer.png" download="Flyer_Marche_Internationale_Seme_Podji_2026.png" class="download-btn">
                 📥 Télécharger le Flyer Officiel (PNG)
@@ -373,4 +361,5 @@
         <section>
             <h2>Soutien Institutionnel</h2>
             <div class="authority-container">
-                <img src="maire-seme.png" alt="Photo de M. Thomas SINGBO" class="authority-photo">
+                <img src="maire-seme.png" alt="Photo de M. Thomas SINGBO" class="authority-photo" onerror="this.src='LOGO.png'">
+                <div class="authority-details">
