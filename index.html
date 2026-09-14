@@ -114,7 +114,7 @@
             padding: 0 1rem;
         }
 
-        section {
+        .box {
             background: white;
             border-radius: 12px;
             padding: 2rem;
@@ -140,7 +140,6 @@
             justify-content: center;
             font-size: 3rem;
             color: #555;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
             position: relative;
         }
 
@@ -168,7 +167,14 @@
             border-radius: 30px;
             margin-top: 1.5rem;
             box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-            text-align: center;
+        }
+
+        .authority-block {
+            margin-bottom: 2rem;
+        }
+        
+        .authority-block:last-child {
+            margin-bottom: 0;
         }
 
         .authority-container {
@@ -215,13 +221,8 @@
         .authority-role {
             font-weight: bold;
             color: var(--accent-color);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-size: 1.1rem;
-        }
-
-        .authority-text {
-            font-style: italic;
-            color: #555;
         }
 
         .countdown {
@@ -230,32 +231,28 @@
             text-align: center;
         }
 
-        .countdown h3 {
+        .countdown h2 {
+            color: white;
+            border: none;
             margin-top: 0;
-            font-weight: 400;
         }
 
         .timer {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            font-size: 1.5rem;
+            gap: 1rem;
+            font-size: 1.3rem;
             font-weight: bold;
             flex-wrap: wrap;
         }
 
         .timer-item {
-            background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1rem;
+            background: #0056b3;
+            color: white;
+            padding: 0.6rem 1.2rem;
             border-radius: 6px;
             min-width: 90px;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
         .program-container {
@@ -269,7 +266,7 @@
         }
 
         .tshirt-box {
-            width: 200px;
+            width: 180px;
             flex-shrink: 0;
             text-align: center;
             background-color: var(--secondary-color);
@@ -280,7 +277,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 180px;
+            height: 160px;
             position: relative;
         }
 
@@ -354,12 +351,12 @@
         form {
             display: flex;
             flex-direction: column;
+            gap: 10px;
         }
 
         label {
             font-weight: 600;
-            margin-top: 1.2rem;
-            margin-bottom: 0.4rem;
+            margin-top: 0.5rem;
         }
 
         input[type="text"], input[type="tel"] {
@@ -369,106 +366,25 @@
             font-size: 1rem;
         }
 
-        .radio-group {
-            background: var(--secondary-color);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 0.5rem;
-        }
-
-        .radio-option {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
-            cursor: pointer;
-        }
-
-        .radio-option input {
-            margin-right: 10px;
-            transform: scale(1.2);
-        }
-
         button[type="submit"] {
-            margin-top: 2rem;
+            margin-top: 1rem;
             background-color: #25d366;
             color: white;
             border: none;
             padding: 1rem;
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marche Internationale Sèmè-Podji</title>
-    <style>
-        body { font-family: sans-serif; background: #f4f6f9; color: #333; margin: 0; padding: 20px; }
-        .box { background: white; padding: 20px; border-radius: 8px; max-width: 600px; margin: 20px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2 { color: #0056b3; text-align: center; }
-        .timer { display: flex; justify-content: center; gap: 10px; font-weight: bold; font-size: 1.2rem; margin: 20px 0; }
-        .timer div { background: #0056b3; color: white; padding: 10px; border-radius: 4px; }
-        form { display: flex; flex-direction: column; gap: 10px; }
-        input, button { padding: 10px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc; }
-        button { background: #25d366; color: white; font-weight: bold; border: none; cursor: pointer; }
-    </style>
-</head>
-<body>
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
 
-    <div class="box" style="text-align:center;">
-        <h1># Marche Internationale</h1>
-        <p><i>« Ensemble pour une santé meilleure ! »</i></p>
-    </div>
-
-    <div class="box">
-        <h2>Soutien Officiel</h2>
-        <p><strong>M. Thomas SINGBO</strong> (Maire de Sèmè-Podji)</p>
-        <p><strong>M. Mathieu SAHOUI</strong> (Chef de l'Arrondissement d'Ekpè)</p>
-    </div>
-
-    <div class="box">
-        <h2>⏱ Compte à rebours (31 Octobre 2026)</h2>
-        <div class="timer">
-            <div id="days">00 Jours</div>
-            <div id="hours">00 Heures</div>
-            <div id="minutes">00 Min</div>
-            <div id="seconds">00 Sec</div>
-        </div>
-    </div>
-
-    <div class="box">
-        <h2>📍 Programme Officiel (20 KM)</h2>
-        <p><strong>Rassemblement :</strong> 06H00 au CEG1 Ekpè</p>
-        <p><strong>Départ :</strong> 07H00</p>
-        <p><strong>Itinéraire :</strong> CEG1 Ekpè ➡ Ekpè gare ➡ Carrefour Sèmè (Retour) ➡ Djèffa gare ➡ CEG1 Ekpè</p>
-    </div>
-
-    <div class="box">
-        <h2>🙋‍♂️ Inscription Bénévole</h2>
-        <form id="wf">
-            <label>Nom et Prénom :</label>
-            <input type="text" id="n" required placeholder="Ex: Jean KPODÉ">
-            <label>Numéro WhatsApp :</label>
-            <input type="tel" id="w" required placeholder="Ex: 01000000">
-            <button type="submit">🟢 Envoyer sur WhatsApp</button>
-        </form>
-    </div>
-
-    <script>
-        const t = new Date("October 31, 2026 06:00:00").getTime();
-        setInterval(function() {
-            const n = new Date().getTime();
-            const d = t - n;
-            document.getElementById("days").innerText = Math.floor(d / 86400000) + " Jours";
-            document.getElementById("hours").innerText = Math.floor((d % 86400000) / 3600000) + " Heures";
-            document.getElementById("minutes").innerText = Math.floor((d % 3600000) / 60000) + " Min";
-            document.getElementById("seconds").innerText = Math.floor((d % 60000) / 1000) + " Sec";
-        }, 1000);
-
-        document.getElementById("wf").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const nom = document.getElementById("n").value;
-            const tel = document.getElementById("w").value;
-            const txt = `🚨 *NOUVELLE INSCRIPTION*\n👤 *Nom :* ${nom}\n📱 *WhatsApp :* ${tel}`;
-            window.open(`https://wa.me{encodeURIComponent(txt)}`, '_blank');
-        });
-    </script>
-</body>
-</html>
+        @media (max-width: 650px) {
+            .header-logos { gap: 1rem; }
+            .program-container { flex-direction: column-reverse; align-items: center; }
+            .tshirt-box { width: 100%; max-width: 240px; }
+ 
