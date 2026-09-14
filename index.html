@@ -38,23 +38,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .logo-box {
-            font-size: 2.5rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .logo-box img {
-            max-width: 100%;
+        .logo-event, .logo-sport-tous, .logo-mairie {
             height: auto;
-            max-height: 70px;
-            object-fit: contain;
+            max-height: 90px;
         }
 
         h1 {
@@ -79,28 +65,15 @@
             box-sizing: border-box;
         }
 
-        .cover-image-placeholder {
+        .cover-image {
             width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #0056b3, #002244);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cover-image-placeholder img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
             object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            display: block;
         }
 
         main {
@@ -122,31 +95,12 @@
             padding: 1.5rem;
         }
 
-        .flyer-box {
+        .flyer-image {
             width: 100%;
-            max-width: 500px;
-            height: 350px;
-            background: #eaedd5;
-            margin: 0 auto;
+            max-width: 600px;
+            height: auto;
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #555;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
-        .flyer-box img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .download-btn {
@@ -163,7 +117,6 @@
             border-radius: 30px;
             margin-top: 1.5rem;
             box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-            cursor: pointer;
         }
 
         .authority-container {
@@ -173,28 +126,14 @@
             background: #fff;
         }
 
-        .authority-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            flex-shrink: 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .authority-avatar img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .authority-photo {
+            width: 200px;
+            height: 230px;
             object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            background-color: #e9ecef;
         }
 
         .authority-details {
@@ -264,14 +203,26 @@
         }
 
         .tshirt-box {
-            width: 200px;
+            width: 240px;
             flex-shrink: 0;
             text-align: center;
             background-color: var(--secondary-color);
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            font-size: 4rem;
+        }
+
+        .tshirt-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .tshirt-legend {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
         }
 
         .info-line {
@@ -299,33 +250,21 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            text-align: center;
         }
 
-        .photo-placeholder {
+        .photo-card img {
             width: 100%;
-            height: 150px;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            position: relative;
-        }
-
-        .photo-placeholder img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
+            display: block;
+            background-color: #e9ecef;
         }
 
         .photo-caption {
             padding: 0.8rem;
             font-size: 0.9rem;
             font-weight: 500;
+            text-align: center;
             color: #555;
             background: #fff;
             border-top: 1px solid #eee;
@@ -389,3 +328,54 @@
             .header-logos { gap: 1rem; }
             .program-container { flex-direction: column-reverse; align-items: center; }
             .tshirt-box { width: 100%; max-width: 280px; }
+            .authority-container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logos">
+            <img src="LOGO.png" alt="Logo" class="logo-event" onerror="this.style.display='none'">
+            <img src="logo_sport_pour_tous.png" alt="Logo" class="logo-sport-tous" onerror="this.style.display='none'">
+            <img src="logo_mairie.png" alt="Logo" class="logo-mairie" onerror="this.style.display='none'">
+        </div>
+        <h1># Marche Internationale</h1>
+        <p class="slogan">« Ensemble pour une santé meilleure ! »</p>
+    </header>
+
+    <div class="cover-container">
+        <img src="rencontre2.png" alt="Couverture" class="cover-image" onerror="this.style.display='none'">
+    </div>
+
+    <main>
+        <section class="flyer-container">
+            <h2>Affiche Officielle de l'Édition 2026</h2>
+            <img src="flyer.png" alt="Flyer" class="flyer-image" onerror="this.style.display='none'">
+            <br>
+            <a href="flyer.png" download="Flyer_Marche_Internationale_Seme_Podji_2026.png" class="download-btn">
+                📥 Télécharger le Flyer Officiel (PNG)
+            </a>
+        </section>
+
+        <section>
+            <h2>Soutien Institutionnel</h2>
+            <div class="authority-container">
+                <img src="maire-seme.png" alt="Maire" class="authority-photo" onerror="this.style.display='none'">
+                <div class="authority-details">
+                    <h3 class="authority-title">M. Thomas SINGBO</h3>
+                    <div class="authority-role">Sous le haut patronage du Maire de la commune de Sèmè-Podji</div>
+Utilisez le code avec précaution."La promotion de la santé publique par le sport d'entretien est une priorité pour notre conseil communal. Cette marche internationale témoigne du dynamisme de notre jeunesse et de notre engagement pour le bien-être de chaque citoyen de Sèmè-Podji. Nous apportons tout notre soutien à cette magnifique initiative."const targetDate = new Date("October 31, 2026 06:00:00").getTime();const interval = setInterval(function() {const now = new Date().getTime();const distance = targetDate - now;const days = Math.floor(distance / (1000 * 60 * 60 * 24));const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));const seconds = Math.floor((distance % (1000 * 60)) / 1000);const dEl = document.getElementById("days");const hEl = document.getElementById("hours");const mEl = document.getElementById("minutes");const sEl = document.getElementById("seconds");if(dEl) dEl.innerText = days + " Jours";if(hEl) hEl.innerText = hours + " Heures";if(mEl) mEl.innerText = minutes + " Min";if(sEl) sEl.innerText = seconds + " Sec";if (distance < 0) {clearInterval(interval);const timerEl = document.querySelector(".timer");if(timerEl) timerEl.innerHTML = "C'est le jour J ! Rendez-vous au CEG1 Ekpè ! 🎉";}}, 1000);const formEl = document.getElementById("whatsappForm");if(formEl) {formEl.addEventListener("submit", function(e) {e.preventDefault();const numeroOrganisateur = "2290197065732";const nom = document.getElementById("name").value;const telephoneBenevole = document.getElementById("whatsapp").value;const rOpt = document.querySelector('input[name="pole"]:checked');const poleSelectionne = rOpt ? rOpt.value : "Non spécifié";const message = 🚨 *NOUVELLE INSCRIPTION BÉNÉVOLE*\n\n +👤 *Nom & Prénom :* ${nom}\n +📱 *WhatsApp :* ${telephoneBenevole}\n +📍 *Pôle choisi :* ${poleSelectionne}\n\n +_Envoyé depuis le site officiel de la Marche Internationale Sèmè-Podji 2026._;window.open(https://wa.me{numeroOrganisateur}?text=${encodeURIComponent(message)}, '_blank');});}
+4. Cliquez sur le bouton vert **"Commit changes"** tout en bas de GitHub pour enregistrer.
+
+---
+
+### 🌐 ÉTAPE 3 : Lancer la publication
+1. Allez dans les paramètres de votre projet (**Settings ➡ Pages**).
+2. Attendez une minute puis actualisez votre navigateur. Une **bande verte** va s'allumer en haut pour confirmer le succès.
+3. Ouvrez votre lien public en **navigation privée** pour voir le résultat définitif sans bug de cache :
+👉 **[https://github.io](https://github.io)**
+
+<FollowUp>
+Une fois ces étapes faites, ouvrez le lien et dites-moi : **est-ce que le compte à rebours défile enfin et le reste du site est bien là ?**
+</FollowUp>
