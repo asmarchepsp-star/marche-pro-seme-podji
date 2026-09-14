@@ -38,9 +38,23 @@
             margin-bottom: 1.5rem;
         }
 
-        .logo-event, .logo-sport-tous, .logo-mairie {
+        .logo-box {
+            font-size: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo-box img {
+            max-width: 100%;
             height: auto;
-            max-height: 90px;
+            max-height: 70px;
+            object-fit: contain;
         }
 
         h1 {
@@ -65,15 +79,28 @@
             box-sizing: border-box;
         }
 
-        .cover-image {
+        .cover-image-placeholder {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            max-height: 420px;
-            object-fit: cover;
+            height: 300px;
+            background: linear-gradient(135deg, #0056b3, #002244);
             border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
             box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-image-placeholder img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         main {
@@ -95,12 +122,31 @@
             padding: 1.5rem;
         }
 
-        .flyer-image {
+        .flyer-box {
             width: 100%;
-            max-width: 550px;
-            height: auto;
+            max-width: 500px;
+            height: 350px;
+            background: #eaedd5;
+            margin: 0 auto;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #555;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .flyer-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
         }
 
         .download-btn {
@@ -117,7 +163,7 @@
             border-radius: 30px;
             margin-top: 1.5rem;
             box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
-            text-align: center;
+            cursor: pointer;
         }
 
         .authority-container {
@@ -127,14 +173,28 @@
             background: #fff;
         }
 
-        .authority-photo {
-            width: 200px;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            flex-shrink: 0;
+        .authority-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .authority-avatar img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .authority-details {
@@ -204,26 +264,14 @@
         }
 
         .tshirt-box {
-            width: 240px;
+            width: 200px;
             flex-shrink: 0;
             text-align: center;
             background-color: var(--secondary-color);
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .tshirt-image {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .tshirt-legend {
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-top: 0.5rem;
+            font-size: 4rem;
         }
 
         .info-line {
@@ -251,21 +299,33 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            text-align: center;
         }
 
-        .photo-card img {
+        .photo-placeholder {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
+            height: 150px;
             background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .photo-placeholder img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .photo-caption {
             padding: 0.8rem;
             font-size: 0.9rem;
             font-weight: 500;
-            text-align: center;
             color: #555;
             background: #fff;
             border-top: 1px solid #eee;
@@ -329,38 +389,3 @@
             .header-logos { gap: 1rem; }
             .program-container { flex-direction: column-reverse; align-items: center; }
             .tshirt-box { width: 100%; max-width: 280px; }
-            .authority-container { flex-direction: column; text-align: center; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="header-logos">
-            <!-- Intégration de vos noms de logos officiels réels -->
-            <img src="image_X3F_B8.png" alt="Logo Officiel Marche Pro Sèmè-Podji" class="logo-event" onerror="this.style.opacity='0'">
-            <img src="image_dmYCeJ.png" alt="Logo Bureau Communal du Sport pour Tous" class="logo-sport-tous" onerror="this.style.opacity='0'">
-            <img src="image_k5Ljh8.png" alt="Logo Officiel Ville de Sèmè-Podji" class="logo-mairie" onerror="this.style.opacity='0'">
-        </div>
-        <h1># Marche Internationale</h1>
-        <p class="slogan">« Ensemble pour une santé meilleure ! »</p>
-    </header>
-
-    <div class="cover-container">
-        <!-- Intégration de votre photo d'équipe réelle comme couverture -->
-        <img src="image_FKSXMV.png" alt="Photo d'équipe" class="cover-image" onerror="this.style.display='none'">
-    </div>
-
-    <main>
-        <section class="flyer-container">
-            <h2>Affiche Officielle de l'Édition 2026</h2>
-            <!-- Intégration de votre flyer réel -->
-            <img src="image_zM3RqU.png" alt="Affiche officielle de l'événement" class="flyer-image" onerror="this.style.display='none'">
-            <br>
-            <a href="image_zM3RqU.png" download="Flyer_Marche_Internationale_Seme_Podji_2026.png" class="download-btn">
-                📥 Télécharger l'Affiche Officielle (PNG)
-            </a>
-        </section>
-
-        <section>
-            <h2>Soutien Institutionnel</h2>
