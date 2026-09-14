@@ -3,6 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marche Internationale Sèmè-Podji - 31 Octobre 2026</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --accent-color: #e67e22;
+            --success-color: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 2rem 1rem 1.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .header-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-box {
+            font-size: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .slogan {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .cover-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 1.5rem auto 0 auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .cover-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #0056b3, #002244);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-image-placeholder img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .flyer-container {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .flyer-box {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            background: #eaedd5;
+            margin: 0 auto;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #555;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .flyer-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--success-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            text-align: center;
+        }
+
+        .authority-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #fff;
+        }
+
+        .authority-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .authority-avatar img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .authority-details {
+            flex: 1;
+        }
+
+        .authority-title {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        .authority-role {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .authority-text {
+            font-style: italic;
+            color: #555;
+        }
+
+        .countdown {
+            background: linear-gradient(135deg, var(--primary-color), #003366);
+            color: white;
+            text-align: center;
+        }
+
+        .countdown h3 {
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-wrap: wrap;
+        }
+
+        .timer-item {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            min-width: 90px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .program-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .program-details {
+            flex: 1;
+        }
+
+        .tshirt-box {
+            width: 200px;
+            flex-shrink: 0;
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+            position: relative;
+        }
+
+        .tshirt-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .info-line {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .itinerary {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .photo-card {
+            background: var(--secondary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .photo-placeholder img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        input[type="text"], input[type="tel"] {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+        }
+
+        .radio-option input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        button[type="submit"] {
+            margin-top: 2rem;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 1rem;
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marche Internationale Sèmè-Podji</title>
     <style>
         body { font-family: sans-serif; background: #f4f6f9; color: #333; margin: 0; padding: 20px; }
